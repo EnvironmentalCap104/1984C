@@ -51,7 +51,7 @@ campaignTrail_temp.candidate_json = [
             "party": "Democrat",
             "state": "Minnesota",
             "priority": 2,
-            "description": "<p><i>\"Modern politics today requires a mastery of television. I've never really warmed up to television and, in fairness to television, it's never warmed up to me.\"</i><p>Many would've thought this was gonna be obvious. That Vice President Walter Mondale, the protégé of Hubert Humphrey, would be the Democratic nominee in 1984 after eight years of being Vice President. But he's also in a fairly expected position: A tough fight to the White House. Liberal Midwestern Democrats have tended to struggle in presidential politics. Hubert couldn't win it in '68 nor could George McGovern in '72. Not to mention, Jimmy isn't the most popular incumbent President. Can Fritz Mondale defy the odds and secure another four years of Democratic control in the White House? Or will he fall to his rival in 1976 running for the vice presidency, Bob Dole?</p>",
+            "description": "<p><i>\"Modern politics today requires a mastery of television. I've never really warmed up to television and, in fairness to television, it's never warmed up to me.\"</i><p>Many would've thought this was gonna be obvious. That Vice President Walter Mondale, the protégé of Hubert Humphrey, would be the Democratic nominee in 1984 after eight years of being Vice President. But he's also in a fairly expected position: A tough fight to the White House. Liberal Midwestern Democrats have tended to struggle in presidential politics. Hubert couldn't win in '68 nor could George McGovern in '72. Not to mention, Jimmy isn't the most popular incumbent President. Can Fritz Mondale defy the odds and secure another four years of Democratic control in the White House? Or will he fall to his rival in 1976 running for the vice presidency, Bob Dole?</p>",
             "color_hex": "#c70000",
             "secondary_color_hex": "#90C0FF",
             "is_active": 1,
@@ -151,7 +151,7 @@ campaignTrail_temp.candidate_json = [
             "electoral_victory_message": "'",
             "electoral_loss_message": "'",
             "no_electoral_majority_message": "'",
-            "description_as_running_mate": "<i>\"Pro football gave me a good perspective. When I entered the political arena, I had already been booed, cheered, cut, sold, traded, and hung in effigy.\"</i><p>Jack Kemp has been well-known and well-regarded for many years. He was a star NFL and CFL quarterback for 13 years, many of those years for the Buffalo Bills, whose fanbase in Buffalo, New York he has represented in Congress since 1971. When it comes to politics, he is a self-described \"bleeding-heart conservative\" with the charisma of Jack Kennedy. His strongest issue is his support of Reagan's idea of supply-side economics, and quite socially moderate. It's very likely Bob Dole will lose New York anyway, but Kemp can help in suburban areas that are ready to see a better future after the last eight years.</p>",
+            "description_as_running_mate": "<i>\"Pro football gave me a good perspective. When I entered the political arena, I had already been booed, cheered, cut, sold, traded, and hung in effigy.\"</i><p>Jack Kemp has been well-known and well-regarded for many years. He was a star NFL and CFL quarterback for 13 years, many of those years for the Buffalo Bills, whose fanbase in Buffalo, New York he has represented in Congress since 1971. When it comes to politics, he is a self-described \"bleeding-heart conservative\" with the charisma of Jack Kennedy. His strongest issue is his support of Reagan's idea of supply-side economics, and he is also quite socially moderate. It's very likely Bob Dole will lose New York anyway, but Kemp can help in suburban areas that are ready to see a better future after the last eight years.</p>",
             "candidate_score": 0,
             "running_mate": true
         }
@@ -266,7 +266,7 @@ campaignTrail_temp.candidate_json = [
             "electoral_victory_message": "This guy wins!",
             "electoral_loss_message": "This guy loses!",
             "no_electoral_majority_message": "We all win?",
-            "description_as_running_mate": "<p><i>\"At Texas A&M you learn first to follow, then to develop and practice your leadership skills, and finally you become someone others want to follow.\"</i><p>After getting the scare of his life in 1982 after nearly losing to the son of twice-failed Democratic presidential nominee Adlai Stevenson, has been quite popular in his home state of Illinois. Its 24 electoral votes, which Mondale was always favored to grab, could almost guarantee a Dole presidency if you win it. He is a moderate Republican, but that might be what the country needs at this time to move on from the last eight years. He has great skills in prosecution, after he tried and convicted the top aides of the big boss, Richard C. Daley, in a bipartisan manner. Thompson could be a great asset if you want to take a law-and-order approach to your 1984 campaign.</p>",
+            "description_as_running_mate": "<p><i>\"At Texas A&M you learn first to follow, then to develop and practice your leadership skills, and finally you become someone others want to follow.\"</i><p>After getting the scare of his life in 1982 after nearly losing to the son of twice-failed Democratic presidential nominee Adlai Stevenson, Governor Jim Thompson has been quite popular in his home state of Illinois. Its 24 electoral votes, which Mondale was always favored to grab, could almost guarantee a Dole presidency if you win it. He is a moderate Republican, but that might be what the country needs at this time to move on from the last eight years. He has great skills in prosecution, after he tried and convicted the top aides of the big boss, Richard C. Daley, in a bipartisan manner. Thompson could be a great asset if you want to take a law-and-order approach to your 1984 campaign.</p>",
             "candidate_score": 1,
             "running_mate": true
         }
@@ -492,3 +492,330 @@ document.body.background = "https://coolbackgrounds.io/images/backgrounds/white/
 document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#00d5ff!important;}</style>";
 
 //#endcode
+
+var changeGameDisp = (hide) => {
+  disp = "";
+  if (hide) {
+    disp = "none";
+  }
+  document.getElementsByClassName("inner_window_w_desc")[0].style.display = disp
+};
+
+e.creditsPage = () => {
+  credits_html = `
+    <h3>Coding</h3>
+    <p>Environmental_Cap104</p>
+    <h3>Writing</h3>
+    <p>Environmental_Cap104</p>
+    <h3>Misc.</h3>
+    <p>DecstarG for the Music Player</p>
+    <p>Banner - u/thecupojo3</p>
+    <h3>Music Credit</h3>
+    <p>Luke Million - Ice Ice Arnie</p>
+    <p>Total Recall - The Dream</p>
+    <p>JibJab.com - 2020 Year in Review</p>
+    <p>ELO - Mr. Blue Sky</p>
+    <p>Journey - Only the Young</p>
+    <p>Survivor - Eye of the Tiger</p>
+    <p>Lee Greenwood - God Bless the U.S.A.</p>
+    <p>Natasha Owens - Trump Won</p>
+    <p>Billy Joel - We Didn't Start The Fire</p><br><br>
+  `
+  changeGameDisp(true);
+  var spacer = document.createElement("amongusspacerthisisntarealelement");
+  spacer.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+  document
+    .getElementsByClassName("inner_window_w_desc")[0]
+    .children[1].appendChild(spacer);
+    changeGameDisp(true);
+    var menuHeader = document.createElement("div");
+    menuHeader.classList.add("inner_window_front");
+    menuHeader.innerHTML = `<h1 style='font-family: "Times New Roman";'><font color='#0496f7'>Credits</font></h1>`;
+    menuHeader.id = "SOTUheader";
+    menuHeader.style = "height: 50px;background-color:#2d2d2d";
+    var newMenu = document.createElement("div");
+    newMenu.classList.add("inner_window_front");
+    newMenu.id = "SOTUmenu";
+    newMenu.style = `height:260px;background-color:#2d2d2d;color:white;overflow-y: scroll;`;
+
+    newMenu.innerHTML = credits_html;
+    let z = document.getElementById("game_window");
+    var backButton = document.createElement("button");
+    backButton.style =
+      "position: relative; bottom: -13px; left: -380px; width: 150px; height: 80px;font-size:40px;padding-top:5px;padding-left:8px";
+    backButton.id = "backSOTUBtn";
+    backButton.innerHTML = `<b>BACK</b>`;
+    backButton.onclick = function () {
+      document.getElementById("SOTUheader").remove();
+      document.getElementById("SOTUmenu").remove();
+      document.getElementById("backSOTUBtn").remove();
+      changeGameDisp(false);
+    };
+    z.appendChild(menuHeader);
+    z.appendChild(newMenu);
+    z.appendChild(backButton);
+
+}
+
+e.credits = "<button onclick='e.creditsPage()'>Credits</button>"
+
+
+// Initialise custom music
+
+$("#music_player")[0].children[0].style.display="none"
+$("#music_player")[0].children[1].style.display="none"
+
+document.getElementById("modLoadReveal").style.display="none"
+document.getElementById("modloaddiv").style.display="none"
+
+musicBox = document.getElementById("music_player")
+musicBox.style.display=""
+
+var trackSel;
+e = campaignTrail_temp
+e.selectedSoundtrack = 0
+
+toTime = (seconds) => {
+  var date = new Date(null);
+  date.setSeconds(seconds);
+  return date.toISOString().substr(11, 8);
+}
+
+generateTime = () => {
+    // Get the audio element
+    var audio = document.getElementById("campaigntrailmusic");
+
+    timeTracker = document.createElement("div");
+    timeTracker.style = `
+      text-align:left;
+      border-style:solid;
+      border-width:3px;
+      height:150px;
+      width:200px;
+      background-color:#999999;
+      float:right;
+      padding: 10px;
+    `
+    $("#trackSelParent")[0].prepend(timeTracker);
+    $("#trackSelParent")[0].prepend(document.createElement("br"));
+
+    // Create a new element to display the current position of the audio
+    var positionDisplay = document.createElement("gg");
+    positionDisplay.id = "position-display";
+
+    // Create a new slider element to change the time
+    var timeSlider = document.createElement("input");
+    timeSlider.type = "range";
+    timeSlider.min = 0;
+    timeSlider.max = 1;
+    timeSlider.step = 0.001;
+    timeSlider.value = 0;
+    timeSlider.style.width = "200px";
+    timeSlider.id = "time-slider";
+
+    var pausePlay = document.createElement("button");
+    pausePlay.id = "position-display";
+    pausePlay.innerHTML = "<b>Pause</b>"
+    pausePlay.style.width = "100%";
+
+
+    pausePlay.addEventListener("click", event => {
+      event.preventDefault();
+      updatePositionDisplay();
+      let audio = document.getElementById("campaigntrailmusic");
+      if (audio.paused) {
+        audio.play();
+        event.target.innerHTML = "<b>Pause</b>";
+        return;
+      }
+      audio.pause();
+      event.target.innerHTML = "<b>Play</b>";
+      return;
+    })
+
+    var volumeLabel = document.createElement("gg");
+    volumeLabel.id = "volume-label";
+    volumeLabel.innerHTML = "<br><b>Volume: </b>"
+
+    var volumeSlider = document.createElement("input");
+    volumeSlider.type = "range";
+    volumeSlider.min = 0;
+    volumeSlider.max = 1;
+    volumeSlider.step = 0.001;
+    volumeSlider.value = 0;
+    volumeSlider.style.width = "200px";
+    volumeSlider.id = "volume-slider";
+
+    volumeSlider.value = audio.volume;
+
+    timeTracker.appendChild(pausePlay);
+    timeTracker.appendChild(document.createElement("br"));
+    timeTracker.appendChild(document.createElement("br"));
+    timeTracker.appendChild(positionDisplay);
+    timeTracker.appendChild(timeSlider);
+    timeTracker.appendChild(volumeLabel);
+    timeTracker.appendChild(volumeSlider);
+
+    updatePositionDisplay();
+
+    //for (let i = 0; i < 10; i++)
+    //timeTracker.append(document.createElement("br"));
+
+
+    // Function to update the position display
+    function updatePositionDisplay() {
+      positionDisplay.innerHTML = "<b>Time:</b> " + toTime(audio.currentTime) + "<br>";
+      timeSlider.value = audio.duration ? audio.currentTime / audio.duration : 0;
+    }
+
+    // Function to change the time of the audio
+    function changeTime() {
+      positionDisplay.innerHTML = "<b>Time:</b> " + toTime(audio.currentTime) + "<br>";
+      audio.currentTime = timeSlider.value * audio.duration;
+    }
+
+    updateVolume = event => {
+      audio.volume = event.target.value;
+    }
+    
+    // Update the position display and slider every second
+    setInterval(updatePositionDisplay, 1000);
+
+    // Listen for changes to the time slider and change the time of the audio
+    timeSlider.addEventListener("input", changeTime);
+    volumeSlider.addEventListener("input", updateVolume)
+}
+
+function newMusicPlayer() {
+  trackSel = document.createElement("div");
+  trackSel.id = "trackSelParent"
+  let z = `<br><br><br><br><br><br><br><br><br><br><div id='trackSel' style="text-align:left;border-style:solid;border-width:3px;overflow-y: scroll;overflow-x: hidden;height:200px; width:400px;background-color:#999999;float:right;">`
+  z += `<b><select id='selectSoundtrack'><option value='`+soundtracks[e.selectedSoundtrack].name+`'>`+soundtracks[e.selectedSoundtrack].name+"</option>"
+  for (i in soundtracks) {
+    if (soundtracks[e.selectedSoundtrack] != soundtracks[i]) {
+      z += `<option value='`+soundtracks[i].name+`'>`+soundtracks[i].name+`</option>`
+    }
+  }
+  z += `</select></b><br><br>`
+  // <label><input type="radio" name="option" value="option1">Option 1</label><br>
+  for (i in soundtracks[e.selectedSoundtrack].tracklist) {
+    let a = soundtracks[e.selectedSoundtrack].tracklist[i]
+    let b = `<label><input class="trackSelector" type="radio" name="trackSelector" value="`+i+`">`+a.name+`</label><br>`
+    z += b
+  }
+  z += "</div><br><br>"
+  trackSel.innerHTML = z
+
+  // select correct song
+
+  musicBox.appendChild(trackSel);
+  Array.from(document.getElementById("trackSel").children).filter(f=>{
+    return f.tagName == "LABEL"
+  }).map(f=>f.children[0])[0].checked = true
+
+  // set soundtrack changer
+
+  soundtrackSelector = document.getElementById("selectSoundtrack")
+  soundtrackSelector.onchange = function() {
+    for (i in soundtracks) {
+      if (soundtracks[i].name == soundtrackSelector.value) {
+        e.selectedSoundtrack = i
+        break
+      }
+    }
+    document.getElementById("trackSelParent").remove()
+    newMusicPlayer()
+  }
+
+  var matches = document.querySelectorAll('.trackSelector');
+
+  for (match in matches) {
+    matches[match].onchange = function() {
+      audio = $("#campaigntrailmusic")[0];
+      audio.src = soundtracks[e.selectedSoundtrack].tracklist[this.value].url
+      audio.currentTime = 0
+    }
+  }
+
+  musicBox.children[2].loop = false
+  musicBox.children[2].src = soundtracks[e.selectedSoundtrack].tracklist[0].url
+
+  musicBox.children[2].onended = function() {
+    console.log("next track")
+    let selected = Number(document.querySelector('input[name="trackSelector"]:checked').value);
+    let newSel = clamp(selected+1, soundtracks[e.selectedSoundtrack].tracklist.length-1, 0)
+    let buttons = Array.from(document.getElementById("trackSel").children).filter(f=>{
+      return f.tagName == "LABEL"
+    }).map(f=>f.children[0])
+    //let selectedIndex = buttons.map(f=>f.children[0]).map(f=>f.checked)
+    buttons[newSel].click()
+  }
+
+  for (w = 0; w < 7; w++) {
+    document.getElementById("trackSelParent").appendChild(document.createElement("br"))
+  }
+  
+  generateTime();
+}
+
+clamp = function(a, max, min, overflow=true) {
+  if (overflow) {
+    return a > max ? min : a < min ? max : a;
+  }
+  return a > max ? max : a < min ? min : a;
+}
+
+
+// Track list
+
+var soundtracks = {
+  0: {
+    name: "1984: Carterverse",
+    tracklist: [
+      {
+        "name": "Jack Turner - Why Not the Best?",
+        "url": "https://audio.jukehost.co.uk/lFW07ySRHAXO9rs3MLkk06LzdDtltgFw"
+      },
+    ]
+  },
+  1: {
+    name: "Better Days Are Ahead",
+    tracklist: [
+      {
+        "name": "Kansas - Carry On Wayward Son",
+        "url": "https://files.catbox.moe/9eafym.mp3"
+      },
+      {
+        "name": "Sam & Dave - Soul Man",
+        "url": "https://audio.jukehost.co.uk/Rs8nfDRWCqjz0W0zFuZuDSm39PFVioAe"
+      },
+      {
+        "name": "Michael Jackson - Wanna Be Startin' Somethin'",
+        "url": "https://audio.jukehost.co.uk/hecrgqxnFnnJ7rDdNibxFJPtoO0GED3y"
+      },
+    ]
+  },
+  2: {
+    name: "Do We Really Want to Change Course?",
+    tracklist: [
+      {
+        "name": "Bill Conti - Gonna Fly Now",
+        "url": "https://audio.jukehost.co.uk/FrksQCzDpwcKtoXLvGSJI6gvXvCTgcBg"
+      },
+      {
+        "name": "Blue Öyster Cult - Burnin' for You",
+        "url": "https://audio.jukehost.co.uk/eko64buqQuVAyMeF4K5efsaeHj7YJa8t"
+      },
+      {
+        "name": "Prince - Purple Rain",
+        "url": "https://audio.jukehost.co.uk/megEH9ivHtlZF0Ocxs2jtsx3B6y0iBm6"
+      },
+    ]
+  }
+}
+
+// Set up new music player
+
+newMusicPlayer()
+
+RecReading=true
