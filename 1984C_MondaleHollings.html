@@ -6979,7 +6979,7 @@ campaignTrail_temp.answer_score_issue_json = [
         "pk": 15613,
         "fields": {
             "answer": 4455,
-            "issue": "57",
+            "issue": 57,
             "issue_score": 0.4,
             "issue_importance": 5
         }
@@ -8348,6 +8348,53 @@ campaignTrail_temp.running_mate_image_url = "https://upload.wikimedia.org/wikipe
 campaignTrail_temp.candidate_last_name = "Mondale";
 campaignTrail_temp.running_mate_last_name = "Hollings";
 
+campaignTrail_temp.multiple_endings = true;
+endingPicker = (out, totv, aa, quickstats) => {
+
+    function setImage(url) {
+        if(url == '' || url == null) return;
+        let interval = setInterval(function () {
+            img = document.getElementsByClassName("person_image")[0];
+            if (img != null) {
+                img.src = url;
+                clearInterval(interval);
+            }
+        }, 50);
+    }
+
+    if(quickstats[0] == 0) {
+        setImage("https://i.pinimg.com/originals/80/5d/5f/805d5fbc1b0370a1258009be3a32f1c5.gif");
+        return `<h3>Walter, you lost everything. </h3><p>Those were the exact words that came out of Walter Cronkite's mouth the moment Washington DC was called for Bob Dole, just five minutes after you wake up from your election night nap at your hotel in Minneapolis. Afterwards, you turn off your television and go back to sleep.</p>`;
+    }
+    if(quickstats[0] > 0 && quickstats[0] < 112) {
+        setImage("https://www.gainesville.com/gcdn/authoring/2012/10/21/NTGS/ghows-LK-b41f5606-dc9d-4d3e-95d0-618ff25c9e2e-1fbd6575.jpeg");
+        return `<h3>The Memories Have Returned</h3><p>The memories of the failed candidacy of George McGovern, just a dozen years ago, have returned. You have lost just like him, in a landslide. It seems as though the Democrats who win nowadays need to be from the South or the Northeast. Not the Midwest. <p><p>The day after the election, the phone rings. You pick it up. It's George McGovern himself. He tells you that he feels your pain, and tells you about his experience after his 1972 loss. The two of you talk for nearly thirty minutes, until President Carter walks in. <p><p>You tell him you have to go and hang up the phone. President Carter thanks you for your cooperation over the last eight years, and discusses his plans for the transition of power to Bob Dole and Howard Baker. You thank him too, and you get back to work finishing your vice presidential duties. </p>`;
+    }
+    if(quickstats[0] > 111 && quickstats[0] < 198) {
+        setImage("");
+        return `<h3>We Did Want to Change Course</h3><p>Although the last eight years have brought honesty and compassion to the White House, the country wanted to move on. Wanted to tell the Carter administration, and you, to Carry On. You'll be always remembered. Your life's no longer empty, but surely heaven is waiting for you.<p><p>It was a larger than expected victory for Bob Dole and the Republicans, but that's honestly what happens when you are running as the Vice President of a rather unpopular administration. It was surely a miracle you two won four years ago, because that October Surprise saved you and Jimmy's careers. Now you can carry on and live a peaceful retirement in Minnesota, and be on the campaign trail for any future liberal trailblazers that may hail from Minnesota or anywhere else in the country. </p>`;
+    }
+    if(quickstats[0] > 197 && quickstats[0] < 269) {
+        setImage("");
+        return `<h3>Sorry, Fritz. But this was expected.</h3><p>It was just as close of an election as the last two, but the wind just blew the other way in 1984. You were just another New Deal Midwestern liberal who lost the election. People like you never win, and not many people thought this would be the year to change that, unfortunately. <p><p>It was surely a close race, and you did perform well in many areas. The country just wanted to move on from Carter and his administration, and take a more conservative approach to governing, and especially economic and foreign policy. You can now go back to Minnesota and enjoy a peaceful retirement, away from the spotlight. Or you can end up like your protégé and head back to the Senate if there's a vacancy. It's strictly up to you. </p>`;
+    }
+    if(quickstats[0] > 269 && quickstats[0] < 307) {
+        setImage("");
+        return `<h3>Well done, Fritz. You won the 1984 election.</h3><p>You surely defied the odds and upset Bob Dole to secure a third consecutive term in the White House for Democrats. It was just as narrow as you and Jimmy's victories, but still a win nevertheless. As you celebrate with your wife Joan and your three children at your election-night rally in Minneapolis, the crowd is electric. You accomplished something, that neither your protégé Hubert nor good friend George McGovern were able to replicate. And that is winning a presidential election as a Midwestern liberal, and on top of that, being underestimated. <p><p>You are able to flip back the Senate to the Democrats and keep the House with your victory, so it should be fairly easy for most of your agenda to pass in the first two years. If things go wrong, or people get tired of Democrats, 1986 and 1988 are gonna be tough. Republicans are scrambling to find a candidate for 1988, but there are plenty of names out there that could give you a good run. Best of luck to you, Fritz Mondale. </p>`;
+    }
+    if(quickstats[0] > 306 && quickstats[0] < 367) {
+        setImage("");
+        return `<h3>By god! Even better than Carter.</h3><p>Well this was certainly unexpected. Not only did you win the election in which you were not likely to win, but you did better than Jimmy Carter in both of his victories. It just seems like liberal Democrats are more popular among the American people than Democrats like Carter in this day and age. <p><p>You have a lot of potential during your presidency, and it's up to you on how you're gonna move the country, likely in a more liberal direction. Be very wary though, as some of your ideas may not be popular among Southern Democrats and Republicans. You also need to be prepared to get this Cold War under control, bring peace and democracy across the world, and ease the fears of the American people. Best of luck to you, President-elect Mondale. </p>`;
+    }
+    if(quickstats[0] > 366 && quickstats[0] < 538) {
+        setImage("https://pbs.twimg.com/media/EzYOqh-VIAgucHz.jpg");
+        return `<h3>Liberalism is Back and Alive</h3><p>You won the 1984 election in a landslide. The best showing for a Democrat since Lyndon Johnson in 1964. Matter of fact, you did it in a year you were massively underestimated and counted out, judging by just how unpopular Carter was. Not to mention, the history of electing liberal Democrats has been grim, unless you have the charisma and youth of Jack Kennedy.<p><p>It just seemed that true liberalism is what America wanted, and not the moderate Democrats of Lyndon Johnson and Jimmy Carter. As you celebrate this historic victory with Joan and your three kids, you can't help but wonder how your protégé Hubert Humphrey is reacting. He is surely looking down at you, as a very proud former Vice President. Get ready to become the 40th President of the United States, and the first true liberal since Jack Kennedy. </p>`;
+    }
+    if(quickstats[0] == 538) {
+        setImage("https://www.nps.gov/common/uploads/cropped_image/primary/2B90770F-A12D-C83E-0B432DE42B9133A1.jpg?width=1600&quality=90&mode=crop");
+        return `<h3>Peanuts Forever!</h3><p>Eight years ago, he was just a young man speaking out, straight and simple. His name was Jimmy Carter, and he was running for President. He laid out a plan of action that made a lot of sense. He talked about the government, and how good it could be. That's the way it ought to be, right now. Once and for all, why not the best?<p><p>We needed Jimmy Carter, and couldn't afford to settle for less. The country needed an honorable, gentle peanut farmer from Georgia for President. Now, we are gonna fly now to the man from Minnesota he picked for vice president, Walter Mondale, in a 538 electoral vote landslide. </p>`;
+    }
+}
 
 
 campaignTrail_temp.jet_data = [{
@@ -8364,7 +8411,84 @@ campaignTrail_temp.jet_data = [{
         "runImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FritzHollings.jpg/640px-FritzHollings.jpg"
     },
     "cyoa_enabled": false,
-    "cyoa_data": {}
+    "cyoa_data": {},
+    "endings_enabled": true,
+    "ending_data": {
+        "1724285478017": {
+            "id": 1724285478017,
+            "variable": 0,
+            "operator": "==",
+            "value": 0,
+            "endingImage": "https://i.pinimg.com/originals/80/5d/5f/805d5fbc1b0370a1258009be3a32f1c5.gif",
+            "endingText": "<h3>Walter, you lost everything. </h3><p>Those were the exact words that came out of Walter Cronkite's mouth the moment Washington DC was called for Bob Dole, just five minutes after you wake up from your election night nap at your hotel in Minneapolis. Afterwards, you turn off your television and go back to sleep.</p>",
+            "amount": "0"
+        },
+        "1724285481239": {
+            "id": 1724285481239,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "https://www.gainesville.com/gcdn/authoring/2012/10/21/NTGS/ghows-LK-b41f5606-dc9d-4d3e-95d0-618ff25c9e2e-1fbd6575.jpeg",
+            "endingText": "<h3>The Memories Have Returned</h3><p>The memories of the failed candidacy of George McGovern, just a dozen years ago, have returned. You have lost just like him, in a landslide. It seems as though the Democrats who win nowadays need to be from the South or the Northeast. Not the Midwest. <p><p>The day after the election, the phone rings. You pick it up. It's George McGovern himself. He tells you that he feels your pain, and tells you about his experience after his 1972 loss. The two of you talk for nearly thirty minutes, until President Carter walks in. <p><p>You tell him you have to go and hang up the phone. President Carter thanks you for your cooperation over the last eight years, and discusses his plans for the transition of power to Bob Dole and Howard Baker. You thank him too, and you get back to work finishing your vice presidential duties. </p>",
+            "amount": "0"
+        },
+        "1724285483156": {
+            "id": 1724285483156,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "<h3>We Did Want to Change Course</h3><p>Although the last eight years have brought honesty and compassion to the White House, the country wanted to move on. Wanted to tell the Carter administration, and you, to Carry On. You'll be always remembered. Your life's no longer empty, but surely heaven is waiting for you.<p><p>It was a larger than expected victory for Bob Dole and the Republicans, but that's honestly what happens when you are running as the Vice President of a rather unpopular administration. It was surely a miracle you two won four years ago, because that October Surprise saved you and Jimmy's careers. Now you can carry on and live a peaceful retirement in Minnesota, and be on the campaign trail for any future liberal trailblazers that may hail from Minnesota or anywhere else in the country. </p>",
+            "amount": "111"
+        },
+        "1724285608153": {
+            "id": 1724285608153,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "<h3>Sorry, Fritz. But this was expected.</h3><p>It was just as close of an election as the last two, but the wind just blew the other way in 1984. You were just another New Deal Midwestern liberal who lost the election. People like you never win, and not many people thought this would be the year to change that, unfortunately. <p><p>It was surely a close race, and you did perform well in many areas. The country just wanted to move on from Carter and his administration, and take a more conservative approach to governing, and especially economic and foreign policy. You can now go back to Minnesota and enjoy a peaceful retirement, away from the spotlight. Or you can end up like your protégé and head back to the Senate if there's a vacancy. It's strictly up to you. </p>",
+            "amount": "197"
+        },
+        "1724285632547": {
+            "id": 1724285632547,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "<h3>Well done, Fritz. You won the 1984 election.</h3><p>You surely defied the odds and upset Bob Dole to secure a third consecutive term in the White House for Democrats. It was just as narrow as you and Jimmy's victories, but still a win nevertheless. As you celebrate with your wife Joan and your three children at your election-night rally in Minneapolis, the crowd is electric. You accomplished something, that neither your protégé Hubert nor good friend George McGovern were able to replicate. And that is winning a presidential election as a Midwestern liberal, and on top of that, being underestimated. <p><p>You are able to flip back the Senate to the Democrats and keep the House with your victory, so it should be fairly easy for most of your agenda to pass in the first two years. If things go wrong, or people get tired of Democrats, 1986 and 1988 are gonna be tough. Republicans are scrambling to find a candidate for 1988, but there are plenty of names out there that could give you a good run. Best of luck to you, Fritz Mondale. </p>",
+            "amount": "269"
+        },
+        "1724285640910": {
+            "id": 1724285640910,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "<h3>By god! Even better than Carter.</h3><p>Well this was certainly unexpected. Not only did you win the election in which you were not likely to win, but you did better than Jimmy Carter in both of his victories. It just seems like liberal Democrats are more popular among the American people than Democrats like Carter in this day and age. <p><p>You have a lot of potential during your presidency, and it's up to you on how you're gonna move the country, likely in a more liberal direction. Be very wary though, as some of your ideas may not be popular among Southern Democrats and Republicans. You also need to be prepared to get this Cold War under control, bring peace and democracy across the world, and ease the fears of the American people. Best of luck to you, President-elect Mondale. </p>",
+            "amount": "306"
+        },
+        "1724285651251": {
+            "id": 1724285651251,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "https://pbs.twimg.com/media/EzYOqh-VIAgucHz.jpg",
+            "endingText": "<h3>Liberalism is Back and Alive</h3><p>You won the 1984 election in a landslide. The best showing for a Democrat since Lyndon Johnson in 1964. Matter of fact, you did it in a year you were massively underestimated and counted out, judging by just how unpopular Carter was. Not to mention, the history of electing liberal Democrats has been grim, unless you have the charisma and youth of Jack Kennedy.<p><p>It just seemed that true liberalism is what America wanted, and not the moderate Democrats of Lyndon Johnson and Jimmy Carter. As you celebrate this historic victory with Joan and your three kids, you can't help but wonder how your protégé Hubert Humphrey is reacting. He is surely looking down at you, as a very proud former Vice President. Get ready to become the 40th President of the United States, and the first true liberal since Jack Kennedy. </p>",
+            "amount": "366"
+        },
+        "1724285672234": {
+            "id": 1724285672234,
+            "variable": 0,
+            "operator": "==",
+            "value": 0,
+            "endingImage": "https://www.nps.gov/common/uploads/cropped_image/primary/2B90770F-A12D-C83E-0B432DE42B9133A1.jpg?width=1600&quality=90&mode=crop",
+            "endingText": "<h3>Peanuts Forever!</h3><p>Eight years ago, he was just a young man speaking out, straight and simple. His name was Jimmy Carter, and he was running for President. He laid out a plan of action that made a lot of sense. He talked about the government, and how good it could be. That's the way it ought to be, right now. Once and for all, why not the best?<p><p>We needed Jimmy Carter, and couldn't afford to settle for less. The country needed an honorable, gentle peanut farmer from Georgia for President. Now, we are gonna fly now to the man from Minnesota he picked for vice president, Walter Mondale, in a 538 electoral vote landslide. </p>",
+            "amount": "538"
+        }
+    },
+    "mapping_enabled": false,
+    "mapping_data": {}
 }
 ]
 
