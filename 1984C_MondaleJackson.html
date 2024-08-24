@@ -834,6 +834,22 @@ campaignTrail_temp.answers_json = [
             "question": 735,
             "description": "Howard Baker is just a great debater, as we saw in Congress as the Great Conciliator. I know we're gonna lose this debate, so he won't be there."
         }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 50000,
+        "fields": {
+            "question": 20000,
+            "description": "We need to counterattack Dole for his plans to increase military spending and lower taxes for the rich. The hope is that people will see how out-of-touch Republicans really are with the middle-class."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 50001,
+        "fields": {
+            "question": 20000,
+            "description": "Let's emphasize and embrace that. Jimmy Carter was a wonderful President and Fritz Hollings has a lot of similarities to him. Do we really want to change course?"
+        }
     }
 ]
 
@@ -5923,6 +5939,26 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
+        "pk": 22265,
+        "fields": {
+            "answer": 50000,
+            "candidate": 153,
+            "affected_candidate": 153,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 22266,
+        "fields": {
+            "answer": 50001,
+            "candidate": 153,
+            "affected_candidate": 153,
+            "global_multiplier": -0.025
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
         "pk": 2268,
         "fields": {
             "answer": 4440,
@@ -6661,6 +6697,36 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 4463,
             "issue": 59,
             "issue_score": 0.75,
+            "issue_importance": 5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 184442,
+        "fields": {
+            "answer": 50000,
+            "issue": 57,
+            "issue_score": 0.3,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 156606,
+        "fields": {
+            "answer": 50000,
+            "issue": 61,
+            "issue_score": -0.4,
+            "issue_importance": 3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 156077,
+        "fields": {
+            "answer": 50001,
+            "issue": 60,
+            "issue_score": 0.45,
             "issue_importance": 5
         }
     },
@@ -8037,6 +8103,24 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
+        "pk": 191111,
+        "fields": {
+            "answer": 50000,
+            "candidate": 153,
+            "answer_feedback": "This was a good time to go negative, as the ads you air are just as negative as the ones that Dole aired."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 191112,
+        "fields": {
+            "answer": 50001,
+            "candidate": 153,
+            "answer_feedback": "The Dole campaign ramps up their attacks against you due to this."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
         "pk": 1974,
         "fields": {
             "answer": 4501,
@@ -8501,3 +8585,28 @@ campaignTrail_temp.jet_data = [{
 }
 ]
 
+campaignTrail_temp.cyoa = true
+        
+function switcheroo() {
+campaignTrail_temp.running_mate_image_url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FritzHollings.jpg/640px-FritzHollings.jpg';
+ campaignTrail_temp.running_mate_last_name = 'Hollings';
+}
+cyoAdventure = function (a) {
+    ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
+    if(ans == 4424){
+         campaignTrail_temp.question_number = 24;
+}      
+             
+    if(ans == 4435){
+         switcheroo();
+      campaignTrail_temp.questions_json[20] = {
+        "model": "campaign_trail.question",
+        "pk": 20000,
+        "fields": {
+          "priority": 1,
+          "description": "The Dole campaign releases an ad attacking Jesse Jackson like hell, over his controversial statements and positions. The attack ad has stuck among independent and moderate voters. What is your response to this ad?",
+          "likelihood": 1
+        }
+      }
+    }
+}
