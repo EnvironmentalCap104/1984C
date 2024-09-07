@@ -6993,7 +6993,7 @@ campaignTrail_temp.answer_score_issue_json = [
         "pk": 15597,
         "fields": {
             "answer": 4508,
-            "issue": "57",
+            "issue": 57,
             "issue_score": -0.45,
             "issue_importance": 10
         }
@@ -7003,7 +7003,7 @@ campaignTrail_temp.answer_score_issue_json = [
         "pk": 15606,
         "fields": {
             "answer": 4509,
-            "issue": "57",
+            "issue": 57,
             "issue_score": 0,
             "issue_importance": 10
         }
@@ -8353,6 +8353,53 @@ campaignTrail_temp.running_mate_image_url = "https://d3i6fh83elv35t.cloudfront.n
 campaignTrail_temp.candidate_last_name = "Dole";
 campaignTrail_temp.running_mate_last_name = "Baker";
 
+campaignTrail_temp.multiple_endings = true;
+endingPicker = (out, totv, aa, quickstats) => {
+
+    function setImage(url) {
+        if(url == '' || url == null) return;
+        let interval = setInterval(function () {
+            img = document.getElementsByClassName("person_image")[0];
+            if (img != null) {
+                img.src = url;
+                clearInterval(interval);
+            }
+        }, 50);
+    }
+
+    if(quickstats[0] == 0) {
+        setImage("https://www.clivemaxfield.com/wp-content/uploads/2019/12/maxncb-0058-02-all-we-are-is-dust-in-the-wind.jpg");
+        return `<h3>Dust in the Wind</h3><p>Dust in the Wind. <p><p>All we are is Dust in the Wind.<p><p>Now, don't hang on<p><p>Nothin' lasts forever but the earth and sky<p><p>It slips away<p><p>And all your money won't another minute buy<p><p>Dust in the Wind<p><p>All we are is Dust in the Wind</p>`;
+    }
+    if(quickstats[0] > 0 && quickstats[0] < 173) {
+        setImage("https://static01.nyt.com/images/2018/10/12/arts/12watergate/12watergate-superJumbo-v2.jpg");
+        return `<h3>The Republican Party Has Weakened</h3><p>Ever since Watergate, the Republicans have been weak. The weakest they've been since FDR. It's at the fault of one president who lost his credibility after the break-in of the Watergate Hotel. Tricky Dick Nixon. <p><p>No Republican has been elected to the White House since Dick, even while running the best candidates. Carter was just a bad candidate, and he won narrowly twice. You just got absolutely blown out, and it's likely due to how weak and untrustworthy your party truly is. Time will tell if your party will ever recover from the deficit it's in right now like it did in 1952 with Ike Eisenhower. </p>`;
+    }
+    if(quickstats[0] > 172 && quickstats[0] < 233) {
+        setImage("https://cropper.watch.aetnd.com/public-content-aetn.video.aetnd.com/video-thumbnails/AETN-History_Prod/69/1009/History_Speeches_1045_Reagans_Evil_Empire_still_624x352.jpg");
+        return `<h3>Worse than Reagan</h3><p>Not only did you lose this election, but you did even worse than Reagan did in 1980. During a time when you should've cruised to the presidency. Maybe you just weren't conservative enough because Reaganites didn't come out for you as heavily as four years ago. Yet Ronnie still lost. <p><p>There is a lot of soul-searching going on right now, but it just seems like Republicans have just gotten weaker ever since Watergate. They just haven't found the guy that can get the country back on track. Reagan was the one, but he lost. You were second up, no prevail there either. Now Republicans are panicking about 1988, as options are running out for good candidates. Jack Kemp and Howard Baker are all that's left, unless someone strong can come around... </p>`;
+    }
+    if(quickstats[0] > 232 && quickstats[0] < 269) {
+        setImage("");
+        return `<h3>Three straight elections with a similar result. </h3><p>How is this happening? Republicans should've won the last three straight elections, but they fell short narrowly. You did put up a good fight, but Mondale will become the 40th President of the United States in a close race. <p><p>Some wonder if the Reaganites stayed home and didn't vote for a moderate. Others think the Democrats were more unified in this election. After all, John Anderson didn't run this year. As for you, carry on my wayward son back to Russell where you'll live a peaceful retirement after the hell of a career you've had. After being paralyzed at war tearing the fascists down, to your long Senate career, to a failed presidential bid. You've left a legacy on your country, even though you didn't win the presidency this year. Lay your weary head to rest, don't you cry no more. </p>`;
+    }
+    if(quickstats[0] > 269 && quickstats[0] < 341) {
+        setImage("");
+        return `<h3>Job well done, Bob. </h3><p>You won the 1984 presidential election and will be the 40th President of the United States on January 20, 1985. You've come a long way to get to this point today. Growing up in a small Kansas town, to making many sacrifices fighting for your country in World War II, to a long, well-respected Senate career, to a failed vice presidential candidacy in 1976, and now you are in Topeka declaring victory in the 1984 United States presidential election. <p><p>It was a narrow win, but a win is a win. You have many choices on how you want to lead the country through the decade. You can embrace Reagan conservatism or run a moderate, unifying administration. The choice is yours, but one thing is for certain. Better days are ahead! </p>`;
+    }
+    if(quickstats[0] > 340 && quickstats[0] < 427) {
+        setImage("");
+        return `<h3>Better Days Are Ahead!</h3><p>Well this was surely a convincing victory. One that the country needed after eight years of inflation, taxes, weakness abroad, and more. By someone who ran an optimistic campaign for the future, with the age-old promise that Better Days are Ahead. <p><p>Jimmy Carter is now dust in the wind, and it's up to a true patriot to shift this country in a more wholesome, positive direction with no mudslinging and negativity. With no more inflation, peace through strength, and true American values and patriotism. Under the leadership of Bob Dole. </p>`;
+    }
+    if(quickstats[0] > 426 && quickstats[0] < 538) {
+        setImage("https://www.minnpost.com/wp-content/uploads/sites/default/files/MondaleMcGovernHumphrey640.jpg");
+        return `<h3>The Fate of Midwestern Democrats</h3><p>By god, this was a rout. It was to be expected by many who have studied the campaigns of Midwestern liberal Democrats. Hubert Humphrey lost narrowly to Nixon in 1968, George McGovern got blown out by Dick Nixon in 1972, and now Walter Mondale got blown out by Bob Dole in 1984. Not to mention, the national environment is so strongly against Carter and the Democrats that it would've been hard for them to win this year. Even with a Southerner on the ticket. <p><p>It doesn't matter to you right? Because you will be the next president and have gotten the job in a blowout. You got some work to do to repair the Republican Party from Watergate and Reagan's loss, and there's no one else better to do just that than yourself. </p>`;
+    }
+    if(quickstats[0] == 538) {
+        setImage("https://i1.sndcdn.com/artworks-CzXLqSiow8qV8p1L-ZnjkHg-t1080x1080.jpg");
+        return `<h3>They say Kansas is Flyover Country</h3><p>No way. It's Bigshot Country. Bob Dole had a unique strategy to win a victory like this. It was by using something called Bigshot, and many aren't sure how this even worked. But we'll never know... </p>`;
+    }
+}
 
 
 campaignTrail_temp.jet_data = [{
@@ -8370,8 +8417,81 @@ campaignTrail_temp.jet_data = [{
     },
     "cyoa_enabled": false,
     "cyoa_data": {},
-    "endings_enabled": false,
-    "ending_data": {},
+    "endings_enabled": true,
+    "ending_data": {
+        "1725679494790": {
+            "id": 1725679494790,
+            "variable": 0,
+            "operator": "==",
+            "value": 0,
+            "endingImage": "https://www.clivemaxfield.com/wp-content/uploads/2019/12/maxncb-0058-02-all-we-are-is-dust-in-the-wind.jpg",
+            "endingText": "<h3>Dust in the Wind</h3><p>Dust in the Wind. <p><p>All we are is Dust in the Wind.<p><p>Now, don't hang on<p><p>Nothin' lasts forever but the earth and sky<p><p>It slips away<p><p>And all your money won't another minute buy<p><p>Dust in the Wind<p><p>All we are is Dust in the Wind</p>",
+            "amount": "0"
+        },
+        "1725679498510": {
+            "id": 1725679498510,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "https://static01.nyt.com/images/2018/10/12/arts/12watergate/12watergate-superJumbo-v2.jpg",
+            "endingText": "<h3>The Republican Party Has Weakened</h3><p>Ever since Watergate, the Republicans have been weak. The weakest they've been since FDR. It's at the fault of one president who lost his credibility after the break-in of the Watergate Hotel. Tricky Dick Nixon. <p><p>No Republican has been elected to the White House since Dick, even while running the best candidates. Carter was just a bad candidate, and he won narrowly twice. You just got absolutely blown out, and it's likely due to how weak and untrustworthy your party truly is. Time will tell if your party will ever recover from the deficit it's in right now like it did in 1952 with Ike Eisenhower. </p>",
+            "amount": "0"
+        },
+        "1725679500948": {
+            "id": 1725679500948,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "https://cropper.watch.aetnd.com/public-content-aetn.video.aetnd.com/video-thumbnails/AETN-History_Prod/69/1009/History_Speeches_1045_Reagans_Evil_Empire_still_624x352.jpg",
+            "endingText": "<h3>Worse than Reagan</h3><p>Not only did you lose this election, but you did even worse than Reagan did in 1980. During a time when you should've cruised to the presidency. Maybe you just weren't conservative enough because Reaganites didn't come out for you as heavily as four years ago. Yet Ronnie still lost. <p><p>There is a lot of soul-searching going on right now, but it just seems like Republicans have just gotten weaker ever since Watergate. They just haven't found the guy that can get the country back on track. Reagan was the one, but he lost. You were second up, no prevail there either. Now Republicans are panicking about 1988, as options are running out for good candidates. Jack Kemp and Howard Baker are all that's left, unless someone strong can come around... </p>",
+            "amount": "172"
+        },
+        "1725679532141": {
+            "id": 1725679532141,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "<h3>Three straight elections with a similar result. </h3><p>How is this happening? Republicans should've won the last three straight elections, but they fell short narrowly. You did put up a good fight, but Mondale will become the 40th President of the United States in a close race. <p><p>Some wonder if the Reaganites stayed home and didn't vote for a moderate. Others think the Democrats were more unified in this election. After all, John Anderson didn't run this year. As for you, carry on my wayward son back to Russell where you'll live a peaceful retirement after the hell of a career you've had. After being paralyzed at war tearing the fascists down, to your long Senate career, to a failed presidential bid. You've left a legacy on your country, even though you didn't win the presidency this year. Lay your weary head to rest, don't you cry no more. </p>",
+            "amount": "232"
+        },
+        "1725679541498": {
+            "id": 1725679541498,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "<h3>Job well done, Bob. </h3><p>You won the 1984 presidential election and will be the 40th President of the United States on January 20, 1985. You've come a long way to get to this point today. Growing up in a small Kansas town, to making many sacrifices fighting for your country in World War II, to a long, well-respected Senate career, to a failed vice presidential candidacy in 1976, and now you are in Topeka declaring victory in the 1984 United States presidential election. <p><p>It was a narrow win, but a win is a win. You have many choices on how you want to lead the country through the decade. You can embrace Reagan conservatism or run a moderate, unifying administration. The choice is yours, but one thing is for certain. Better days are ahead! </p>",
+            "amount": "269"
+        },
+        "1725679615487": {
+            "id": 1725679615487,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "<h3>Better Days Are Ahead!</h3><p>Well this was surely a convincing victory. One that the country needed after eight years of inflation, taxes, weakness abroad, and more. By someone who ran an optimistic campaign for the future, with the age-old promise that Better Days are Ahead. <p><p>Jimmy Carter is now dust in the wind, and it's up to a true patriot to shift this country in a more wholesome, positive direction with no mudslinging and negativity. With no more inflation, peace through strength, and true American values and patriotism. Under the leadership of Bob Dole. </p>",
+            "amount": "340"
+        },
+        "1725679629464": {
+            "id": 1725679629464,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "https://www.minnpost.com/wp-content/uploads/sites/default/files/MondaleMcGovernHumphrey640.jpg",
+            "endingText": "<h3>The Fate of Midwestern Democrats</h3><p>By god, this was a rout. It was to be expected by many who have studied the campaigns of Midwestern liberal Democrats. Hubert Humphrey lost narrowly to Nixon in 1968, George McGovern got blown out by Dick Nixon in 1972, and now Walter Mondale got blown out by Bob Dole in 1984. Not to mention, the national environment is so strongly against Carter and the Democrats that it would've been hard for them to win this year. Even with a Southerner on the ticket. <p><p>It doesn't matter to you right? Because you will be the next president and have gotten the job in a blowout. You got some work to do to repair the Republican Party from Watergate and Reagan's loss, and there's no one else better to do just that than yourself. </p>",
+            "amount": "426"
+        },
+        "1725679635184": {
+            "id": 1725679635184,
+            "variable": 0,
+            "operator": "==",
+            "value": 0,
+            "endingImage": "https://i1.sndcdn.com/artworks-CzXLqSiow8qV8p1L-ZnjkHg-t1080x1080.jpg",
+            "endingText": "<h3>They say Kansas is Flyover Country</h3><p>No way. It's Bigshot Country. Bob Dole had a unique strategy to win a victory like this. It was by using something called Bigshot, and many aren't sure how this even worked. But we'll never know... </p>",
+            "amount": "538"
+        }
+    },
     "mapping_enabled": false,
     "mapping_data": {}
 }
