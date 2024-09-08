@@ -4,7 +4,7 @@ campaignTrail_temp.questions_json = [
         "pk": 698,
         "fields": {
             "priority": 1,
-            "description": "It is July 19, 1984. While some expected you to win the nomination, you had to go through George Bush, Paul Laxalt, Howard Baker, and other notable Republicans to get here. You are about to take the stage at the Dallas Convention Center to make your acceptance speech. What will you say to the delegates and everyone else watching?",
+            "description": "It is July 19, 1984. While most saw you as the favorite to win the nomination, you had to go through George Bush, Paul Laxalt, Howard Baker, and other notable Republicans to get here. You are about to take the stage at the Dallas Convention Center to make your acceptance speech. What will you say to the delegates and everyone else watching?",
             "likelihood": 1
         }
     },
@@ -13,7 +13,7 @@ campaignTrail_temp.questions_json = [
         "pk": 699,
         "fields": {
             "priority": 2,
-            "description": "You are someone who has lived the American dream, and has made many sacrifices for the country you love. Your story fighting for America in World War II and in the Senate has made you a true American patriot. Do you plan to emphasize this at all on the campaign trail?",
+            "description": "You are someone who has lived the American dream, and has made many sacrifices for the country you love. Your story fighting for America in World War II and in the Senate has made you a true American patriot. You were paralyzed fighting the Nazis in World War II, and then you recovered to become a strong Republican voice in the United States Senate, all for the country you love so dearly. Do you plan to emphasize this at all on the campaign trail?",
             "likelihood": 1
         }
     },
@@ -67,7 +67,7 @@ campaignTrail_temp.questions_json = [
         "pk": 706,
         "fields": {
             "priority": 4,
-            "description": "Ever since Ronald Reagan's candidacy in 1980, the Republican Party has been in strong favor of supply-side economics and decreased taxes on the rich. Do you stand in support of these economic proposals?",
+            "description": "Ever since Ronald Reagan's candidacy in 1980, the Republican Party has been in strong favor of supply-side economics and decreased taxes on the rich. These policies are almost unanimously popular among Republicans, while independents and Democrats are on the fence about these ideas. Do you stand in support of these economic proposals?",
             "likelihood": 1
         }
     },
@@ -103,7 +103,7 @@ campaignTrail_temp.questions_json = [
         "pk": 749,
         "fields": {
             "priority": 4,
-            "description": "Gun control is an important issue this election year, especially with the rising rates of crime nationwide. Republicans like to play a big game about the Second Amendment. Do you agree with members of your party on this issue?",
+            "description": "Gun control is an important issue this election year, especially with the rising rates of crime nationwide. Republicans like to play a big game about the Second Amendment, while others on the political spectrum call for stronger gun control measures. Where do you stand on this issue?",
             "likelihood": 1
         }
     },
@@ -121,7 +121,7 @@ campaignTrail_temp.questions_json = [
         "pk": 743,
         "fields": {
             "priority": 4,
-            "description": "A major liability for the Mondale campaign was when he admitted he will raise taxes at the DNC in San Francisco. Your party supports lowering taxes, and even repealing some of the taxes from the Carter administration. Do you support these ideas?",
+            "description": "A major liability for the Mondale campaign was when he admitted he will raise taxes at the DNC in San Francisco. Your party supports lowering taxes, and even repealing some of the taxes from the Carter administration. Such ideas are massively popular among everyday Americans and the wealthy. Do you support these ideas?",
             "likelihood": 1
         }
     },
@@ -184,7 +184,7 @@ campaignTrail_temp.questions_json = [
         "pk": 751,
         "fields": {
             "priority": 5,
-            "description": "Some Republicans are disheartened by your selection of Howard Baker to be your running-mate. They were hoping for someone that would better balance the ticket, maybe someone more conservative. How will you reaffirm your selection?",
+            "description": "Some Republicans are disheartened by your selection of Howard Baker to be your running-mate. They were hoping for someone that would better balance the ticket; maybe someone more conservative. How will you reaffirm your selection?",
             "likelihood": 1
         }
     },
@@ -240,7 +240,7 @@ campaignTrail_temp.answers_json = [
         "pk": 4367,
         "fields": {
             "question": 698,
-            "description": "Bob Dole knows that we had a tough primary fight, and we need to get everyone on board. Let's focus on the issues that all Republicans care about, especially the Reagan Republicans. These include abortion, supply-side economics, and peace through strength."
+            "description": "Bob Dole knows that we had a tough primary fight, and we need to get everyone on board. Let's focus on the issues that all Republicans care about, especially the Reagan Republicans. These include abortion, supply-side economics, low taxes, and peace through strength."
         }
     },
     {
@@ -256,7 +256,7 @@ campaignTrail_temp.answers_json = [
         "pk": 4369,
         "fields": {
             "question": 698,
-            "description": "We need to take the attack to Walter Mondale. He is going to raise your taxes, take your guns, and continue the failed policies of the Carter administration. It's time for a change."
+            "description": "We need to take the attack to Walter Mondale. He is going to raise your taxes, make us weak abroad, and continue the failed policies of the Carter administration. It's time for a change."
         }
     },
     {
@@ -304,7 +304,7 @@ campaignTrail_temp.answers_json = [
         "pk": 4375,
         "fields": {
             "question": 700,
-            "description": "Walter Mondale is simply too liberal for everyday Americans. Not only will he raise taxes, but he will also increase government regulations and decrease valuable military spending. Bob Dole will lead as a pragmatic conservative."
+            "description": "Walter Mondale is simply too liberal for everyday Americans. Not only will he raise taxes, but he will also increase government regulations and decrease valuable military spending. Bob Dole will lead as a pragmatic conservative, and will lower taxes, decrease regulations, and strength our military."
         }
     },
     {
@@ -608,7 +608,7 @@ campaignTrail_temp.answers_json = [
         "pk": 4501,
         "fields": {
             "question": 749,
-            "description": "Of course I agree with this. The right to bear arms is in the Constitution, and we aren't gonna let Walter Mondale and the Democrats take guns away from our law-abiding citizens trying to defend themselves."
+            "description": "The right to bear arms is in the Constitution, and we aren't gonna let Walter Mondale and the Democrats take guns away from our law-abiding citizens trying to defend themselves."
         }
     },
     {
@@ -4589,7 +4589,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 152,
             "state": 478,
-            "state_multiplier": 0.7
+            "state_multiplier": 0.77
         }
     },
     {
@@ -8497,3 +8497,10 @@ campaignTrail_temp.jet_data = [{
 }
 ]
 
+campaignTrail_temp.cyoa = true
+cyoAdventure = function (a) {
+    ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
+    if(ans == 4484){
+         campaignTrail_temp.question_number = 24;
+    }
+}
